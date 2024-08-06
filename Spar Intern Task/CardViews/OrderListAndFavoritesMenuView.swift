@@ -1,14 +1,16 @@
 import SwiftUI
 
 struct OrderListAndFavoritesMenuView: View {
+    @State private var isFavoriteTapped = false
+    
     var body: some View {
         VStack {
             Button(action: {}, label: {
-                Image("card-action-order-list")
+                Image("order-list")
                     .frame(width: 16, height: 16)
             })
-            Button(action: {}, label: {
-                Image("card-action-favorite")
+            Button(action: { isFavoriteTapped.toggle() }, label: {
+                Image(isFavoriteTapped ? "heart-filled" : "heart-empty")
                     .frame(width: 16, height: 16)
             })
         }
