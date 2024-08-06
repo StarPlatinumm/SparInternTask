@@ -11,6 +11,8 @@
 		6FED258A2C62490C000C3174 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FED25892C62490C000C3174 /* ContentView.swift */; };
 		6FED258C2C62490E000C3174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FED258B2C62490E000C3174 /* Assets.xcassets */; };
 		6FED258F2C62490E000C3174 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FED258E2C62490E000C3174 /* Preview Assets.xcassets */; };
+		6FED25962C6249E2000C3174 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FED25952C6249E2000C3174 /* ProductModel.swift */; };
+		6FED25982C625324000C3174 /* TableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FED25972C625324000C3174 /* TableCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		6FED25892C62490C000C3174 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6FED258B2C62490E000C3174 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FED258E2C62490E000C3174 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6FED25952C6249E2000C3174 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		6FED25972C625324000C3174 /* TableCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				6FED25872C62490C000C3174 /* Spar_Intern_TaskApp.swift */,
 				6FED25892C62490C000C3174 /* ContentView.swift */,
+				6FED25972C625324000C3174 /* TableCardView.swift */,
+				6FED25952C6249E2000C3174 /* ProductModel.swift */,
 				6FED258B2C62490E000C3174 /* Assets.xcassets */,
 				6FED258D2C62490E000C3174 /* Preview Content */,
 			);
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FED258A2C62490C000C3174 /* ContentView.swift in Sources */,
+				6FED25962C6249E2000C3174 /* ProductModel.swift in Sources */,
 				6FED25882C62490C000C3174 /* Spar_Intern_TaskApp.swift in Sources */,
+				6FED25982C625324000C3174 /* TableCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

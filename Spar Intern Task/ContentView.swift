@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Spar Intern Task
-//
-//  Created by Артем Кривдин on 06.08.2024.
-//
-
 import SwiftUI
 
 struct ContentView: View {
