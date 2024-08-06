@@ -6,7 +6,7 @@ enum Tag: String, Decodable {
     case new = "Новинки"
 }
 
-struct Product: Decodable {
+struct Product: Decodable, Identifiable {
     let id: Int
     let title: String
     let price: Double
@@ -16,5 +16,5 @@ struct Product: Decodable {
     let reviews: Int
     let specialTag: Tag?
     let imageName: String
-    var inCart: Int
+//    var inCart: Int
 }

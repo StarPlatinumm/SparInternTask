@@ -1,20 +1,16 @@
 import SwiftUI
 
 struct TableCardView: View {
-    //    @State private var products: [Product] = [
-    //        Product(id: 0, title: "Хэппи мил (липа)", price: 19.99, discount: 0.1, countryOfOrigin: "Франция 🇫🇷", rating: 4.2, reviews: 16, specialTag: Tag.new, imageName: "image0"),
-    //        Product(id: 1, title: "Мясо единорога", price: 299.99, discount: 0.2, countryOfOrigin: "Япония 🇯🇵", rating: 4.5, reviews: 4, specialTag: Tag.lowPrice, imageName: "image1"),
-    //        Product(id: 2, title: "Куриные рёбра", price: 39.99, discount: 0.15, countryOfOrigin: nil, rating: 4.2, reviews: 7, specialTag: Tag.cardPrice, imageName: "image2"),
-    //        Product(id: 3, title: "Не помидоры", price: 9.99, discount: nil, countryOfOrigin: "Россия 🇷🇺", rating: 4.0, reviews: 22, specialTag: nil, imageName: "image3"),
-    //        Product(id: 4, title: "Запретные плоды", price: 999.99, discount: nil, countryOfOrigin: "Турция 🇹🇷", rating: 4.9, reviews: 14, specialTag: nil, imageName: "image4")
-    //    ]
+    private var product: Product
     
-    private var product: Product = Product(id: 0, title: "Хэппи мил (липа)", price: 19.99, discount: 0.1, countryOfOrigin: "Франция 🇫🇷", rating: 4.2, reviews: 16, specialTag: Tag.new, imageName: "image0", inCart: 0)
+    init(_ product: Product) {
+        self.product = product
+    }
     
     var body: some View {
         ZStack {
             // ЗАДНИК
-            RoundedRectangle(cornerRadius: 20)
+            RoundedRectangle(cornerRadius: 16)
                 .foregroundColor(.sparWhite)
             
             // ОСНОВНОЙ КОНТЕНТ
@@ -92,13 +88,13 @@ struct TableCardView: View {
                 Spacer()
             }
         }
-        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .clipShape(RoundedRectangle(cornerRadius: 16))
         .shadow(color: Color.gray, radius: 4, x: 0, y: 2)
     }
 }
 
 
 #Preview {
-    TableCardView()
+    TableCardView(Product(id: 0, title: "Хэппи мил (липа)", price: 19.99, discount: 0.1, countryOfOrigin: "Франция 🇫🇷", rating: 4.2, reviews: 16, specialTag: Tag.new, imageName: "image0"))
         .frame(width: 168, height: 278)
 }

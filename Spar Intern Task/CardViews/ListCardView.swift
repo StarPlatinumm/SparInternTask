@@ -2,7 +2,11 @@ import SwiftUI
 
 struct ListCardView: View {
     
-    private var product: Product = Product(id: 0, title: "Хэппи мил (липа)", price: 19.99, discount: 0.1, countryOfOrigin: "Франция 🇫🇷", rating: 4.2, reviews: 16, specialTag: Tag.new, imageName: "image0", inCart: 0)
+    private var product: Product
+    
+    init(_ product: Product) {
+        self.product = product
+    }
     
     var body: some View {
         ZStack {
@@ -29,7 +33,7 @@ struct ListCardView: View {
                     }
                     .clipShape(
                         .rect(
-                            topLeadingRadius: 20,
+                            topLeadingRadius: 6,
                             bottomLeadingRadius: 0,
                             bottomTrailingRadius: 0,
                             topTrailingRadius: 0
@@ -105,6 +109,6 @@ struct ListCardView: View {
 
 
 #Preview {
-    ListCardView()
+    ListCardView(Product(id: 0, title: "Хэппи мил (липа)", price: 19.99, discount: 0.1, countryOfOrigin: "Франция 🇫🇷", rating: 4.2, reviews: 16, specialTag: Tag.new, imageName: "image0"))
         .frame(height: 150)
 }
