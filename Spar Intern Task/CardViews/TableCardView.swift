@@ -56,7 +56,7 @@ struct TableCardView: View {
                         // цена
                         VStack(alignment: .leading) {
                             Text("\(String(format: "%.2f", product.price)) р/кг")
-                                .font(.caption)
+                                .font(.subheadline)
                                 .fontWeight(.bold)
                             // старая цена (если есть скидка)
                             if let discount = product.discount {
@@ -83,11 +83,11 @@ struct TableCardView: View {
                 HStack(alignment: .top) {
                     // АКЦИЯ
                     if let specialTag = product.specialTag {
-                        TopLeftBadgeView(specialTag)
+                        SpecialTagView(specialTag)
                     }
                     Spacer()
                     // ПРАВЫЕ КНОПКИ
-                    TopRightButtonsView()
+                    OrderListAndFavoritesMenuView()
                 }
                 Spacer()
             }
@@ -97,66 +97,6 @@ struct TableCardView: View {
     }
 }
 
-struct TopRightButtonsView: View {
-    var body: some View {
-        VStack {
-            Button(action: {}, label: {
-                Image("card-action-order-list")
-                    .frame(width: 16, height: 16)
-            })
-            Button(action: {}, label: {
-                Image("card-action-favorite")
-                    .frame(width: 16, height: 16)
-            })
-        }
-        .padding(8)
-        .background(.white)
-        .opacity(0.9)
-        .foregroundColor(.white)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
-    }
-}
-
-struct TopLeftBadgeView: View {
-    private let badgeText: String
-    private let badgeColor: Color
-    
-    init(_ specialTag: Tag) {
-        badgeText = specialTag.rawValue
-        switch specialTag {
-        case .lowPrice:
-            badgeColor = Color("tagRed")
-        case .cardPrice:
-            badgeColor = Color("tagGreen")
-        case .new:
-            badgeColor = Color("tagPurple")
-        }
-    }
-    
-    var body: some View {
-        ZStack {
-            Rectangle()
-                .foregroundColor(badgeColor)
-                .clipShape(
-                    .rect(
-                        topLeadingRadius: 0,
-                        bottomLeadingRadius: 0,
-                        bottomTrailingRadius: 6,
-                        topTrailingRadius: 6
-                    )
-                )
-                
-            Text(badgeText)
-                .font(.caption2)
-                .foregroundColor(.white)
-                .padding(.leading, 12)
-                .padding(.trailing, 6)
-                .padding(.top, 2)
-                .padding(.bottom, 4)
-        }
-        .fixedSize()
-    }
-}
 
 #Preview {
     TableCardView()
